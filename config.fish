@@ -47,3 +47,16 @@ end
 function pushnew
 	git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)
 end
+
+# Random/general functions
+function code
+    if count $argv > 0
+        idea $argv[1]
+    end
+end
+
+function text
+    if count $argv > 0
+        open -a "Sublime Text" $argv[1]
+    end
+end
