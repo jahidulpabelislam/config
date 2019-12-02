@@ -11,10 +11,18 @@ alias watchassets="./node_modules/.bin/gulp watch"
 
 # Git
 alias changes="git status"
+alias pull="git pull"
 alias push="git push"
 alias addall="git add ."
 
+
 # Git
+function stash
+	if count $argv > 0
+		git stash save $argv[1]
+	end
+end
+
 function branch
     if count $argv > 0
         git checkout $argv
@@ -24,6 +32,12 @@ end
 function branchout
 	if count $argv > 0
 		git checkout -b $argv[1]	
+	end
+end
+
+function add
+	if count $argv > 0
+		git add $argv[1]
 	end
 end
 
@@ -41,6 +55,14 @@ function commitall
 		commit $argv[1]
 	else
 		commit
+	end
+end
+
+function amend
+	if count $argv > 0
+		git commit --amend $argv[1]
+	else
+		git commit --amend
 	end
 end
 
