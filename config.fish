@@ -4,7 +4,7 @@ alias please="sudo"
 # Composer
 alias composerin="composer install --prefer-source"
 alias composerup="composer update --prefer-source"
-    
+
 # Gulp
 alias compileassets="./node_modules/.bin/gulp"
 alias watchassets="./node_modules/.bin/gulp watch"
@@ -14,7 +14,6 @@ alias changes="git status"
 alias pull="git pull"
 alias push="git push"
 alias addall="git add ."
-
 
 # Git
 function stash
