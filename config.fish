@@ -14,11 +14,27 @@ alias changes="git status"
 alias pull="git pull"
 alias push="git push"
 alias addall="git add ."
+alias masterin="git merge master"
+alias developmentin="git merge development"
+alias rebasewmaster="git rebase master"
+alias rebasewdevelopment="git rebase development"
 
 # Git
 function stash
 	if count $argv > 0
 		git stash save $argv[1]
+	end
+end
+
+function revert
+	if count $argv > 0
+		git checkout -- $argv[1]
+	end
+end
+
+function unstage
+	if count $argv > 0
+		git reset HEAD -- $argv[1]
 	end
 end
 
