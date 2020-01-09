@@ -95,6 +95,15 @@ function rebase
 	end
 end
 
+# PHP code
+function sniff
+	phpcs --ignore="vendor" .
+end
+
+function fixer
+    phpcbf --ignore="vendor" .
+end
+
 # Files
 function code
     if count $argv > 0
