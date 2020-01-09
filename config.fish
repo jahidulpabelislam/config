@@ -13,10 +13,11 @@ alias watchassets="./node_modules/.bin/gulp watch"
 alias changes="git status"
 alias pull="git pull"
 alias push="git push"
+alias pushnew="git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)"
 alias addall="git add ."
-alias masterin="git merge master"
+alias masterin="merge master"
 alias developmentin="git merge development"
-alias rebasewmaster="git rebase master"
+alias rebasewmaster="rebase master"
 alias rebasewdevelopment="git rebase development"
 
 # Git
@@ -31,6 +32,7 @@ function revert
 		git checkout -- $argv[1]
 	end
 end
+
 
 function unstage
 	if count $argv > 0
@@ -81,11 +83,19 @@ function amend
 	end
 end
 
-function pushnew
-	git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)
+function merge
+	if count $argv > 0
+		git merge $argv[1]
+	end
 end
 
-# Random/general functions
+function rebase
+	if count $argv > 0
+		git rebase $argv[1]
+	end
+end
+
+# Files
 function code
     if count $argv > 0
         idea $argv[1]
