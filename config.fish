@@ -1,13 +1,18 @@
 # General/random
 alias please="sudo"
 
+
 # Composer
 alias composerin="composer install --prefer-source"
 alias composerup="composer update --prefer-source"
 
+
+
 # Gulp
 alias compileassets="./node_modules/.bin/gulp"
 alias watchassets="./node_modules/.bin/gulp watch"
+
+
 
 # Git
 alias changes="git status"
@@ -95,6 +100,8 @@ function rebase
 	end
 end
 
+
+
 # PHP code
 function sniff
 	phpcs --ignore="vendor" .
@@ -103,6 +110,8 @@ end
 function fixer
     phpcbf --ignore="vendor" .
 end
+
+
 
 # Files
 function code
