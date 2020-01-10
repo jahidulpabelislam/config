@@ -21,9 +21,9 @@ alias push="git push"
 alias pushnew="git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)"
 alias addall="git add ."
 alias masterin="merge master"
-alias developmentin="git merge development"
+alias developmentin="merge development"
 alias rebasewmaster="rebase master"
-alias rebasewdevelopment="git rebase development"
+alias rebasewdevelopment="rebase development"
 
 # Git
 function stash
