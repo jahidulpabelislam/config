@@ -104,11 +104,11 @@ end
 
 # PHP code
 function sniff
-	phpcs --ignore="vendor" .
+	phpcs --ignore="vendor" --standard=PSR12 .
 end
 
 function fixer
-    phpcbf --ignore="vendor" .
+    phpcbf --ignore="vendor" --standard=PSR12 .
 end
 
 
