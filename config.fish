@@ -1,3 +1,7 @@
+ssh-add -K 2>/dev/null;
+
+
+
 # General/random
 alias please="sudo"
 
