@@ -3,9 +3,16 @@ alias please="sudo"
 
 
 
+# PHP
+alias phptest="vendor/bin/phpunit ."
+
+
+
 # Composer
-alias composerin="composer install --prefer-source"
-alias composerup="composer update --prefer-source"
+alias composerin="composer install"
+alias composersin="composer install --prefer-source"
+alias composerup="composer update"
+alias composersup="composer update --prefer-source"
 
 
 
