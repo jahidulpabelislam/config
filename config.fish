@@ -3,6 +3,10 @@ alias please="sudo"
 
 
 
+alias inmysql="mysql -uroot -p"
+
+
+
 # PHP
 alias phptest="vendor/bin/phpunit ."
 
