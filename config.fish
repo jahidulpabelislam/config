@@ -146,3 +146,9 @@ function text
         open -a "Sublime Text" $argv[1]
     end
 end
+
+
+
+function nvmi
+   	bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
