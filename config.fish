@@ -2,6 +2,7 @@
 alias please="sudo"
 
 
+
 # Composer
 alias composerin="composer install --prefer-source"
 alias composerup="composer update --prefer-source"
@@ -15,15 +16,18 @@ alias watchassets="./node_modules/.bin/gulp watch"
 
 
 # Git
+alias branch="git branch | grep \* | cut -d ' ' -f2"
 alias changes="git status"
 alias pull="git pull"
 alias push="git push"
 alias pushnew="git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)"
 alias addall="git add ."
+alias master="checkout master"
 alias masterin="merge master"
 alias developmentin="merge development"
 alias rebasewmaster="rebase master"
 alias rebasewdevelopment="rebase development"
+alias popstash="git stash pop"
 
 # Git
 function stash
@@ -38,6 +42,12 @@ function revert
 	end
 end
 
+function reverttomaster
+	if count $argv > 0
+		git checkout origin/master --$argv[1]
+	end
+end
+
 
 function unstage
 	if count $argv > 0
@@ -45,7 +55,7 @@ function unstage
 	end
 end
 
-function branch
+function checkout
     if count $argv > 0
         git checkout $argv
     end
