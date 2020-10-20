@@ -43,6 +43,7 @@ alias masterin="merge master"
 alias developmentin="merge development"
 alias rebasewmaster="rebase master"
 alias rebasewdevelopment="rebase development"
+alias stashes="git stash list"
 alias popstash="git stash pop"
 
 # Git
