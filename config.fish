@@ -16,6 +16,7 @@ alias phptest="vendor/bin/phpunit ."
 
 
 
+
 # Composer
 alias composerin="composer install"
 alias composersin="composer install --prefer-source"
@@ -59,7 +60,7 @@ end
 
 function reverttomaster
 	if count $argv > 0
-		git checkout origin/master --$argv[1]
+		git checkout origin/master -- $argv[1]
 	end
 end
 
