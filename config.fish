@@ -48,28 +48,28 @@ alias popstash="git stash pop"
 
 # Git
 function stash
-	if count $argv > 0
-		git stash save $argv[1]
-	end
+    if count $argv > 0
+        git stash save $argv[1]
+    end
 end
 
 function revert
-	if count $argv > 0
-		git checkout -- $argv[1]
-	end
+    if count $argv > 0
+        git checkout -- $argv[1]
+    end
 end
 
 function reverttomaster
-	if count $argv > 0
-		git checkout origin/master -- $argv[1]
-	end
+    if count $argv > 0
+        git checkout origin/master -- $argv[1]
+    end
 end
 
 
 function unstage
-	if count $argv > 0
-		git reset HEAD -- $argv[1]
-	end
+    if count $argv > 0
+        git reset HEAD -- $argv[1]
+    end
 end
 
 function checkout
@@ -79,59 +79,59 @@ function checkout
 end
 
 function branchout
-	if count $argv > 0
-		git checkout -b $argv[1]	
-	end
+    if count $argv > 0
+        git checkout -b $argv[1]
+    end
 end
 
 function add
-	if count $argv > 0
-		git add $argv[1]
-	end
+    if count $argv > 0
+        git add $argv[1]
+    end
 end
 
 function commit
-	if count $argv > 0
-		git commit -m $argv
-	else
-		git commit
-	end
+    if count $argv > 0
+        git commit -m $argv
+    else
+        git commit
+    end
 end
 
 function commitall
-	addall
-	if count $argv > 0
-		commit $argv[1]
-	else
-		commit
-	end
+    addall
+    if count $argv > 0
+        commit $argv[1]
+    else
+        commit
+    end
 end
 
 function amend
-	if count $argv > 0
-		git commit --amend $argv[1]
-	else
-		git commit --amend
-	end
+    if count $argv > 0
+        git commit --amend $argv[1]
+    else
+        git commit --amend
+    end
 end
 
 function merge
-	if count $argv > 0
-		git merge $argv[1]
-	end
+    if count $argv > 0
+        git merge $argv[1]
+    end
 end
 
 function rebase
-	if count $argv > 0
-		git rebase $argv[1]
-	end
+    if count $argv > 0
+        git rebase $argv[1]
+    end
 end
 
 
 
 # PHP code
 function sniff
-	phpcs --ignore="vendor" --standard=PSR12 .
+    phpcs --ignore="vendor" --standard=PSR12 .
 end
 
 function fixer
@@ -156,5 +156,5 @@ end
 
 
 function nvmi
-   	bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
 end
